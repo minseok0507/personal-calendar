@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    animation: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+.top .top-control .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top .material-icons-outlined {
+    font-size: 30px;
+}
+
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-family: Roboto, "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+
+.top {
+    width: 100%;
+    height: 70px;
+}
+
+.top > div {
+    float: left;
+}
+
+.top .logo {
+    width: 150px;
+    height: 100%;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.top .logo span {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.top .top-control {
+    width: 100px;
+    height: 100%;
+    text-align: center;
+}
+
+.top .top-control > button {
+    width: 40px;
+    height: 100%;
+    float: left;
+    margin-left: 5px;
+}
+
+.top .top-date {
+    margin: 0 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.top-year,
+.top-month {
+    margin-left: 10px;
+}
+
+.top .top-button {
+    position: absolute;
+    right: 100px;
+    width: 200px;
+    line-height: 50px;
+}
+
+/*@media (max-width: 800px) {
+    .top .top-button {
+    }
+
+    .small-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .top .logo {
+        height: 220px;
+    }
+
+    .main-container > table {
+        width: 100%;
+    }
+}*/
+
+.top-button button {
+    width: 50%;
+    height: 100px;
+    float: left;
+}
+
+
+.main-container {
+    width: 100%;
+    height: 100%;
+}
+
+.main-container > table {
+    background-color: aliceblue;
+    width: calc(100% - 200px);
+    height: calc(100% - 50px);
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+
+.main-container .big-week {
+    height: 16%;
+}
+
+.main-container .big-week > td {
+    position: relative;
+}
+
+.main-container .big-week > td:hover {
+    background-color: #ececec;
+}
+
+.main-container .big-top {
+    height: 20px;
+}
+
+.main-container .big-day {
+    color: #e3e3e3;
+
+    width: 100%;
+    height: 100%;
+}
+
+.main-container .enabled {
+    color: black;
+}
+
+
+.event {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.event > .event-content {
+    position: absolute;
+    font-size: 14px;
+    line-height: 20px;
+    width: 95%;
+    height: 20px;
+    top: 30px;
+    left: -10px;
+    color: white;
+    background-color: Green;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.29);
+    border-radius: 5px;
+}
+
+
+.small-container {
+    width: 200px;
+    height: calc(100% - 50px);
+    float: left;
+}
+
+.small-container table {
+    margin: 10px;
+    width: 180px;
+    height: 220px;
+    font-size: 10px;
+}
+
+
+.small-container .top-nav {
+    line-height: 40px;
+    font-size: 13px;
+}
+
+.small-container .material-icons-outlined {
+    font-size: 20px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 23px;
+
+}
+
+.small-container .material-icons-outlined:hover {
+
+}
+
+.small-container .top-nav td {
+    text-align: center;
+}
+
+.small-container .day-title {
+    text-align: center;
+}
+
+.small-container .small-day {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 23px;
+    color: lightgray;
+}
+
+.small-container .small-day:hover {
+    background-color: #ececec;
+}
+
+
+.popup-event,
+.popup-update {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    opacity: 0;
+    transform: translate(0, 50%);
+    display: none;
+}
+
+.popup-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.popup-content {
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    padding: 20px;
+
+    transform: translate(-50%, -80%);
+    border-radius: 5px;
+
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, .14),
+    0 9px 46px 8px rgba(0, 0, 0, .12),
+    0 11px 15px -7px rgba(0, 0, 0, .2);
+}
+
+.popup-content textarea,
+.popup-content input {
+    width: 250px;
+    margin-bottom: 7px;
+}
+
+.popup-content span {
+    display: block;
+    width: 100px;
+    font-size: 13px;
+
+}
+
+.popup-button {
+    position: absolute;
+
+    width: 50px;
+    height: 40px;
+}
+
+.popup-save {
+    right: 10px;
+    bottom: 10px;
+}
+
+.popup-del {
+    right: 10px;
+    bottom: 70px;
+}
+
+.popup-button > button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.popup-button > button > span {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+
+.popup-close {
+    width: 100%;
+    height: 30px;
+    background-color: #cfcfcf;
+    border-radius: 5px;
+
+    font-size: 20px;
+}
+
+
